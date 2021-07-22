@@ -29,17 +29,17 @@ steps:
   displayName: Build
   inputs:
     command: build
-    projects: '**/*.csproj'
+    projects: 'Emily/azure-practice/time-to-text/TimeToText.Functions/TimeToSpeech.Functions.csproj'
     arguments: '--configuration $(buildConfiguration)' # Update this to match your need
 
 - task: DotNetCoreCLI@2
   inputs:
     command: test
-    projects: '**/*Tests/*.csproj'
+    projects: 'Emily/azure-practice/time-to-text/TimeToText.Functions/TimeToSpeech.Functions.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: test
-    projects: '**/*Tests/*.csproj'
+    projects: 'Emily/azure-practice/time-to-text/TimeToText.Functions/TimeToSpeech.Functions.csproj'
     arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
